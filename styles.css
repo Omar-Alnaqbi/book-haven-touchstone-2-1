@@ -1,0 +1,798 @@
+/* Book Haven Bookstore - Final Touchstone */
+
+/* =========================
+   General Styling
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #131c26;
+    font-family: Calibri, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, sans-serif;
+    color: #131c26;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p,
+li,
+label,
+input,
+textarea,
+button,
+td,
+th {
+    font-size: 16px;
+}
+
+
+/* =========================
+   Customer Status Bar
+========================= */
+
+.customer-status-bar {
+    width: 100%;
+    min-height: 42px;
+    background-color: #131c26;
+    padding: 6px 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.customer-status-button {
+    width: auto;
+    min-width: 150px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    margin: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.customer-status-button:hover {
+    background-color: #ffffff;
+    color: #131c26;
+}
+
+.customer-status-button:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background-color: #2e2e4e;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header img {
+    width: 90px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0;
+    flex: 1;
+    white-space: nowrap;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+header nav a:hover,
+header nav a:focus {
+    background-color: #5c2e5c;
+}
+
+
+/* =========================
+   Links
+========================= */
+
+a {
+    color: #3f5461;
+}
+
+a:hover {
+    color: #742c36;
+}
+
+a:focus {
+    outline: 3px solid #5c2e5c;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    background-color: #5c2e5c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+button:hover {
+    background-color: #742c36;
+}
+
+button:focus {
+    outline: 3px solid #131c26;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   Images
+========================= */
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+/* =========================
+   Homepage
+========================= */
+
+main ul {
+    padding-left: 25px;
+}
+
+main ul li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   Gallery
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table tbody {
+    display: table-row-group;
+}
+
+table tr {
+    display: table-row;
+}
+
+table td {
+    display: table-cell;
+    width: 33.333%;
+    vertical-align: top;
+}
+
+td,
+th {
+    border: 1px solid #3f5461;
+    padding: 18px;
+    text-align: center;
+}
+
+th {
+    background-color: #3e5641;
+    color: #ffffff;
+}
+
+table img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+table button {
+    width: auto;
+    min-width: 130px;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   Shopping Cart Modal
+========================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 550px;
+    margin: 10% auto;
+    padding: 25px;
+    border: 2px solid #3f5461;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    padding-right: 45px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#cartItems {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #3f5461;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+#cartItems ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+#cartItems li {
+    margin-bottom: 6px;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+
+/* =========================
+   Customer Information Modal
+========================= */
+
+.customer-modal-content {
+    max-width: 700px;
+    margin: 4% auto;
+}
+
+.customer-options {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    align-items: stretch;
+}
+
+.customer-option {
+    flex: 1;
+    min-height: 55px;
+    font-weight: bold;
+}
+
+
+/* New Membership - Main Option */
+
+.primary-option {
+    background-color: #5c2e5c;
+    color: #ffffff;
+    border: 2px solid #5c2e5c;
+    font-size: 17px;
+}
+
+.primary-option:hover {
+    background-color: #742c36;
+    border-color: #742c36;
+}
+
+
+/* Existing Member */
+
+#showExistingMember {
+    background-color: #3f5461;
+    color: #ffffff;
+    border: 2px solid #3f5461;
+}
+
+#showExistingMember:hover {
+    background-color: #131c26;
+    border-color: #131c26;
+}
+
+
+/* Guest - Intentionally Less Prominent */
+
+.guest-option {
+    background-color: #f4f4f4;
+    color: #3f5461;
+    border: 1px solid #9b9b9b;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.guest-option:hover {
+    background-color: #e8e8e8;
+    color: #131c26;
+}
+
+
+/* Customer Form Sections */
+
+.customer-section {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #3f5461;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.customer-section h3 {
+    margin-top: 0;
+}
+
+.customer-section form {
+    max-width: 100%;
+}
+
+.customer-section form p {
+    margin-bottom: 18px;
+}
+
+.customer-section label {
+    font-weight: bold;
+}
+
+
+/* New Membership Section */
+
+#newMemberSection {
+    border: 2px solid #5c2e5c;
+}
+
+.primary-action {
+    background-color: #5c2e5c;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 20px;
+}
+
+.primary-action:hover {
+    background-color: #742c36;
+}
+
+
+/* Guest Section */
+
+.guest-section {
+    background-color: #f8f8f8;
+    border: 1px solid #b8b8b8;
+}
+
+.guest-section h3 {
+    color: #3f5461;
+    font-size: 18px;
+}
+
+.guest-note {
+    font-size: 14px;
+    color: #3f5461;
+    margin-bottom: 8px;
+}
+
+.guest-action {
+    background-color: #3f5461;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.guest-action:hover {
+    background-color: #131c26;
+}
+
+
+/* =========================
+   Order Confirmation
+========================= */
+
+.confirmation-content {
+    max-width: 550px;
+    text-align: center;
+}
+
+.confirmation-content h2 {
+    padding-right: 45px;
+}
+
+.confirmation-box {
+    margin: 25px 0;
+    padding: 20px;
+    border: 2px solid #3e5641;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+}
+
+.confirmation-box p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.confirmation-number {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #131c26;
+}
+
+.membership-confirmation {
+    display: none;
+    margin: 20px 0;
+    padding: 18px;
+    border: 2px solid #5c2e5c;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.membership-confirmation p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.member-id {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #5c2e5c;
+}
+
+.member-reminder {
+    font-size: 14px;
+    color: #3f5461;
+}
+
+#finishOrder {
+    min-width: 120px;
+}
+
+
+/* =========================
+   About Us / Contact
+========================= */
+
+form {
+    max-width: 650px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #3f5461;
+    border-radius: 4px;
+    font-family: Calibri, Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #5c2e5c;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   Required Fields Note
+========================= */
+
+.required-note {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-style: italic;
+    color: #3f5461;
+}
+
+
+/* =========================
+   Form Validation Messages
+========================= */
+
+.error-message {
+    display: block;
+    min-height: 20px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #742c36;
+}
+
+.input-error {
+    border: 2px solid #742c36 !important;
+    background-color: #fff8f8;
+}
+
+
+/* =========================
+   Community & Events
+========================= */
+
+blockquote {
+    background-color: #f4f4f4;
+    border-left: 5px solid #5c2e5c;
+    margin: 20px 0;
+    padding: 15px 20px;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background-color: #3e5641;
+    color: #ffffff;
+    padding: 25px 5%;
+    margin-top: 40px;
+}
+
+footer h3 {
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:focus {
+    outline-color: #ffffff;
+}
+
+footer input[type="email"] {
+    max-width: 300px;
+    margin-right: 8px;
+}
+
+footer button {
+    width: auto;
+}
+
+
+/* =========================
+   Responsive Web Design
+========================= */
+
+@media screen and (max-width: 500px) {
+
+    .customer-status-bar {
+        justify-content: center;
+        padding: 7px 4%;
+    }
+
+    .customer-status-button {
+        width: auto;
+        min-width: 170px;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 26px;
+        white-space: normal;
+    }
+
+    header nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    table,
+    table tbody,
+    table tr,
+    table td {
+        display: block;
+        width: 100%;
+    }
+
+    table td {
+        margin-bottom: 15px;
+    }
+
+    table img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    table button {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 100%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .close-modal {
+        width: 40px;
+        min-width: 40px;
+        margin-top: 0;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .cart-actions button {
+        width: 100%;
+    }
+
+    .customer-modal-content {
+        margin: 5% auto;
+    }
+
+    .customer-options {
+        flex-direction: column;
+    }
+
+    .customer-option {
+        width: 100%;
+    }
+
+    .primary-option {
+        font-size: 16px;
+    }
+
+    .guest-option {
+        font-size: 13px;
+    }
+
+    .customer-section {
+        padding: 15px;
+    }
+
+    .required-note {
+        font-size: 12px;
+    }
+
+    .confirmation-number {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    .member-id {
+        font-size: 22px;
+    }
+
+    footer input[type="email"] {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+
+    footer button {
+        width: 100%;
+    }
+}
