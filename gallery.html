@@ -4,10 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Book Haven Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Book Haven Bookstore - Gallery</title>
 </head>
 
 <body>
+
+    <div class="customer-status-bar">
+
+        <button type="button"
+                id="customerStatusButton"
+                class="customer-status-button">
+            Login / Register
+        </button>
+
+    </div>
 
     <header>
         <img src="images/logo.png"
@@ -16,149 +27,637 @@
 
         <h1>Book Haven Bookstore</h1>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a> |
             <a href="gallery.html">Gallery</a> |
             <a href="about.html">About Us</a> |
-            <a href="community.html">Community &amp; Events</a>
+            <a href="community.html">Community & Events</a>
         </nav>
-
-        <hr>
     </header>
+
+    <hr>
 
     <main>
 
         <h2>Gallery</h2>
 
         <p>
-            Explore our selection of books, magazines, and products for
-            readers and book lovers.
+            Browse our selection of books, magazines,
+            and products for readers.
         </p>
 
-        <table>
+        <button type="button" id="viewCart">
+            View Cart
+        </button>
+
+        <br><br>
+
+        <table border="1"
+               aria-label="Book Haven products">
+
             <tr>
+
                 <td>
                     <img src="images/Client3_Book1.png"
                          alt="Brie Mine 4Ever book"
                          width="200">
-                    <br>
-                    <strong>Brie Mine 4Ever</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Brie Mine 4Ever</h3>
+
+                    <p>A book for cheese lovers.</p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Brie Mine 4Ever">
+                        Add to Cart
+                    </button>
                 </td>
 
                 <td>
                     <img src="images/Client3_Book2.png"
                          alt="Glory Riders book"
                          width="200">
-                    <br>
-                    <strong>Glory Riders</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Glory Riders</h3>
+
+                    <p>A book about bikers.</p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Glory Riders">
+                        Add to Cart
+                    </button>
                 </td>
 
                 <td>
                     <img src="images/Client3_Book3.png"
                          alt="Sorcerer's Shadowed Chronicles book"
                          width="200">
-                    <br>
-                    <strong>Sorcerer's Shadowed Chronicles</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Sorcerer's Shadowed Chronicles</h3>
+
+                    <p>A fantasy book.</p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Sorcerer's Shadowed Chronicles">
+                        Add to Cart
+                    </button>
                 </td>
+
             </tr>
 
             <tr>
+
                 <td>
                     <img src="images/Client3_Magazine1.png"
-                         alt="Book Haven magazine"
+                         alt="Ball magazine"
                          width="200">
-                    <br>
-                    <strong>Magazine 1</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Ball</h3>
+
+                    <p>A magazine about pickleball.</p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Ball">
+                        Add to Cart
+                    </button>
                 </td>
 
                 <td>
                     <img src="images/Client3_Magazine2.png"
-                         alt="Book Haven magazine"
+                         alt="Travel magazine"
                          width="200">
-                    <br>
-                    <strong>Magazine 2</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Travel</h3>
+
+                    <p>A magazine for travelers.</p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Travel">
+                        Add to Cart
+                    </button>
                 </td>
 
                 <td>
                     <img src="images/Client3_Magazine3.png"
-                         alt="Book Haven magazine"
+                         alt="Eat magazine"
                          width="200">
-                    <br>
-                    <strong>Magazine 3</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Eat</h3>
+
+                    <p>A magazine for food lovers.</p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Eat">
+                        Add to Cart
+                    </button>
                 </td>
+
             </tr>
 
             <tr>
+
+                <td>
+                    <img src="images/Client3_ToteBag.png"
+                         alt="Book Haven tote bag"
+                         width="200">
+
+                    <h3>Reading Tote Bag</h3>
+
+                    <p>
+                        A canvas tote bag for readers
+                        and book lovers.
+                    </p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Reading Tote Bag">
+                        Add to Cart
+                    </button>
+                </td>
+
                 <td>
                     <img src="images/Client3_Notebook.png"
                          alt="Book Haven notebook"
                          width="200">
-                    <br>
-                    <strong>Book Haven Notebook</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Book Haven Notebook</h3>
+
+                    <p>
+                        A notebook for writing notes,
+                        ideas, and reading lists.
+                    </p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Book Haven Notebook">
+                        Add to Cart
+                    </button>
                 </td>
 
                 <td>
                     <img src="images/Client3_Stickers.png"
                          alt="Book Haven stickers"
                          width="200">
-                    <br>
-                    <strong>Book Haven Stickers</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
+
+                    <h3>Reading Stickers</h3>
+
+                    <p>
+                        A set of Book Haven stickers
+                        for readers.
+                    </p>
+
+                    <button type="button"
+                            class="addToCart"
+                            data-item="Reading Stickers">
+                        Add to Cart
+                    </button>
                 </td>
 
-                <td>
-                    <img src="images/Client3_ToteBag.png"
-                         alt="Book Haven tote bag"
-                         width="200">
-                    <br>
-                    <strong>Book Haven Tote Bag</strong>
-                    <br>
-                    <button type="button">Add to Cart</button>
-                </td>
             </tr>
+
         </table>
+
+
+        <!-- =========================
+             Shopping Cart Modal
+        ========================== -->
+
+        <div id="cartModal"
+             class="modal"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="cartModalTitle">
+
+            <div class="modal-content">
+
+                <button type="button"
+                        id="closeCart"
+                        class="close-modal"
+                        aria-label="Close shopping cart">
+                    &times;
+                </button>
+
+                <h2 id="cartModalTitle">
+                    Shopping Cart
+                </h2>
+
+                <div id="cartItems">
+                    <p>Your cart is empty.</p>
+                </div>
+
+                <div class="cart-actions">
+
+                    <button type="button"
+                            id="clearCart">
+                        Clear Cart
+                    </button>
+
+                    <button type="button"
+                            id="processOrder">
+                        Process Order
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             Customer Information Modal
+        ========================== -->
+
+        <div id="customerModal"
+             class="modal"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="customerModalTitle">
+
+            <div class="modal-content customer-modal-content">
+
+                <button type="button"
+                        id="closeCustomerModal"
+                        class="close-modal"
+                        aria-label="Close customer information">
+                    &times;
+                </button>
+
+                <h2 id="customerModalTitle">
+                    Customer Information
+                </h2>
+
+                <p>
+                    Choose how you would like to continue.
+                </p>
+
+
+                <!-- Customer Options -->
+
+                <div class="customer-options">
+
+                    <button type="button"
+                            id="showNewMember"
+                            class="customer-option primary-option">
+                        Create New Membership
+                    </button>
+
+                    <button type="button"
+                            id="showExistingMember"
+                            class="customer-option">
+                        Existing Member
+                    </button>
+
+                    <button type="button"
+                            id="showGuest"
+                            class="customer-option guest-option">
+                        Continue as Guest
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     New Member Form
+                ========================== -->
+
+                <div id="newMemberSection"
+                     class="customer-section">
+
+                    <h3>Create New Membership</h3>
+
+                    <p>
+                        Register with Book Haven to receive
+                        your personal Member ID.
+                    </p>
+
+                    <p class="required-note">
+                        Fields marked with * are required.
+                    </p>
+
+                    <form id="newMemberForm"
+                          aria-label="New membership registration"
+                          novalidate>
+
+                        <p>
+                            <label for="memberName">
+                                Full Name: *
+                            </label>
+
+                            <input type="text"
+                                   id="memberName"
+                                   name="memberName"
+                                   required
+                                   aria-describedby="memberNameError">
+
+                            <span id="memberNameError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <p>
+                            <label for="memberPhone">
+                                Phone Number: *
+                            </label>
+
+                            <input type="tel"
+                                   id="memberPhone"
+                                   name="memberPhone"
+                                   required
+                                   aria-describedby="memberPhoneError">
+
+                            <span id="memberPhoneError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <p>
+                            <label for="memberAddress">
+                                Address: *
+                            </label>
+
+                            <textarea id="memberAddress"
+                                      name="memberAddress"
+                                      rows="3"
+                                      required
+                                      aria-describedby="memberAddressError"></textarea>
+
+                            <span id="memberAddressError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <p>
+                            <label for="memberEmail">
+                                Email Address: *
+                            </label>
+
+                            <input type="email"
+                                   id="memberEmail"
+                                   name="memberEmail"
+                                   required
+                                   aria-describedby="memberEmailError">
+
+                            <span id="memberEmailError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <button type="submit"
+                                class="primary-action">
+                            Register & Continue
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- =========================
+                     Existing Member Form
+                ========================== -->
+
+                <div id="existingMemberSection"
+                     class="customer-section">
+
+                    <h3>Existing Member</h3>
+
+                    <p>
+                        Enter your Book Haven Member ID
+                        to continue.
+                    </p>
+
+                    <form id="existingMemberForm"
+                          aria-label="Existing member access"
+                          novalidate>
+
+                        <p>
+                            <label for="existingMemberId">
+                                Member ID: *
+                            </label>
+
+                            <input type="text"
+                                   id="existingMemberId"
+                                   name="existingMemberId"
+                                   placeholder="Example: BH311"
+                                   required
+                                   aria-describedby="existingMemberError">
+
+                            <span id="existingMemberError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <button type="submit">
+                            Continue
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- =========================
+                     Guest Form
+                ========================== -->
+
+                <div id="guestSection"
+                     class="customer-section guest-section">
+
+                    <h3>Continue as Guest</h3>
+
+                    <p class="guest-note">
+                        You can continue without creating
+                        a Book Haven membership.
+                    </p>
+
+                    <p class="required-note">
+                        Fields marked with * are required.
+                    </p>
+
+                    <form id="guestForm"
+                          aria-label="Guest information"
+                          novalidate>
+
+                        <p>
+                            <label for="guestName">
+                                Full Name: *
+                            </label>
+
+                            <input type="text"
+                                   id="guestName"
+                                   name="guestName"
+                                   required
+                                   aria-describedby="guestNameError">
+
+                            <span id="guestNameError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <p>
+                            <label for="guestPhone">
+                                Phone Number: *
+                            </label>
+
+                            <input type="tel"
+                                   id="guestPhone"
+                                   name="guestPhone"
+                                   required
+                                   aria-describedby="guestPhoneError">
+
+                            <span id="guestPhoneError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <p>
+                            <label for="guestAddress">
+                                Address: *
+                            </label>
+
+                            <textarea id="guestAddress"
+                                      name="guestAddress"
+                                      rows="3"
+                                      required
+                                      aria-describedby="guestAddressError"></textarea>
+
+                            <span id="guestAddressError"
+                                  class="error-message"
+                                  aria-live="polite">
+                            </span>
+                        </p>
+
+                        <button type="submit"
+                                class="guest-action">
+                            Continue as Guest
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             Order Confirmation Modal
+        ========================== -->
+
+        <div id="confirmationModal"
+             class="modal"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="confirmationModalTitle">
+
+            <div class="modal-content confirmation-content">
+
+                <button type="button"
+                        id="closeConfirmationModal"
+                        class="close-modal"
+                        aria-label="Close order confirmation">
+                    &times;
+                </button>
+
+                <h2 id="confirmationModalTitle">
+                    Order Confirmed
+                </h2>
+
+                <p id="confirmationCustomerMessage">
+                    Thank you for your order.
+                </p>
+
+                <div class="confirmation-box">
+
+                    <p>
+                        Your confirmation number is:
+                    </p>
+
+                    <p id="confirmationNumber"
+                       class="confirmation-number">
+                    </p>
+
+                </div>
+
+                <div id="membershipConfirmation"
+                     class="membership-confirmation">
+
+                    <p>
+                        Your Book Haven Member ID is:
+                    </p>
+
+                    <p id="newMemberId"
+                       class="member-id">
+                    </p>
+
+                    <p class="member-reminder">
+                        Please keep your Member ID
+                        for future orders.
+                    </p>
+
+                </div>
+
+                <button type="button"
+                        id="finishOrder">
+                    Done
+                </button>
+
+            </div>
+
+        </div>
 
     </main>
 
+    <hr>
+
     <footer>
-        <hr>
 
         <h3>Join Our Newsletter</h3>
 
-        <form>
-            <label for="email">Email:</label>
+        <form aria-label="Newsletter subscription">
+
+            <label for="galleryEmail">
+                Email:
+            </label>
+
             <input type="email"
-                   id="email"
-                   name="email"
+                   id="galleryEmail"
+                   name="galleryEmail"
                    placeholder="Enter your email">
 
-            <button type="submit">Subscribe</button>
+            <button type="button"
+                    id="subscribeButton">
+                Subscribe
+            </button>
+
         </form>
 
         <p>
             <a href="index.html">Home</a> |
             <a href="gallery.html">Gallery</a> |
             <a href="about.html">About Us</a> |
-            <a href="community.html">Community &amp; Events</a>
+            <a href="community.html">Community & Events</a>
         </p>
 
         <p>Book Haven Bookstore</p>
+
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
