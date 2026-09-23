@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Book Haven Bookstore - Home</title>
 </head>
 
 <body>
 
+    <div class="customer-status-bar">
+
+        <button type="button"
+                id="customerStatusButton"
+                class="customer-status-button">
+            Login / Register
+        </button>
+
+    </div>
+
     <header>
-        <img src="/book-haven-touchstone-2-1/images/logo.png"
+        <img src="images/logo.png"
              alt="Book Haven Bookstore logo"
              width="100">
 
         <h1>Book Haven Bookstore</h1>
 
-        <nav>
-            <a href="/book-haven-touchstone-2-1/index.html">Home</a> |
-            <a href="/book-haven-touchstone-2-1/gallery.html">Gallery</a> |
-            <a href="/book-haven-touchstone-2-1/about.html">About Us</a> |
-            <a href="/book-haven-touchstone-2-1/community.html">Community & Events</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About Us</a> |
+            <a href="community.html">Community & Events</a>
         </nav>
     </header>
 
@@ -51,22 +62,20 @@
                 in our gallery.
             </p>
 
-            <img src="/book-haven-touchstone-2-1/images/Client3_Book1.png"
+            <img src="images/Client3_Book1.png"
                  alt="Brie Mine 4Ever book"
                  width="200">
 
-            <img src="/book-haven-touchstone-2-1/images/Client3_Book2.png"
+            <img src="images/Client3_Book2.png"
                  alt="Glory Riders book"
                  width="200">
 
-            <img src="/book-haven-touchstone-2-1/images/Client3_Book3.png"
+            <img src="images/Client3_Book3.png"
                  alt="Sorcerer's Shadowed Chronicles book"
                  width="200">
 
             <p>
-                <a href="/book-haven-touchstone-2-1/gallery.html">
-                    View Our Gallery
-                </a>
+                <a href="gallery.html">View Our Gallery</a>
             </p>
         </section>
 
@@ -89,27 +98,36 @@
 
         <h3>Join Our Newsletter</h3>
 
-        <form>
-            <label for="homeEmail">Email:</label>
+        <form aria-label="Newsletter subscription">
+
+            <label for="homeEmail">
+                Email:
+            </label>
 
             <input type="email"
                    id="homeEmail"
                    name="homeEmail"
                    placeholder="Enter your email">
 
-            <button type="button">Subscribe</button>
+            <button type="button"
+                    id="subscribeButton">
+                Subscribe
+            </button>
+
         </form>
 
         <p>
-            <a href="/book-haven-touchstone-2-1/index.html">Home</a> |
-            <a href="/book-haven-touchstone-2-1/gallery.html">Gallery</a> |
-            <a href="/book-haven-touchstone-2-1/about.html">About Us</a> |
-            <a href="/book-haven-touchstone-2-1/community.html">Community & Events</a>
+            <a href="index.html">Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About Us</a> |
+            <a href="community.html">Community & Events</a>
         </p>
 
         <p>Book Haven Bookstore</p>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
