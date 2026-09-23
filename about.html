@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Book Haven Bookstore - About Us</title>
 </head>
 
 <body>
 
+    <div class="customer-status-bar">
+
+        <button type="button"
+                id="customerStatusButton"
+                class="customer-status-button">
+            Login / Register
+        </button>
+
+    </div>
+
     <header>
-        <img src="/book-haven-touchstone-2-1/images/logo.png"
+        <img src="images/logo.png"
              alt="Book Haven Bookstore logo"
              width="100">
 
         <h1>Book Haven Bookstore</h1>
 
-        <nav>
-            <a href="/book-haven-touchstone-2-1/index.html">Home</a> |
-            <a href="/book-haven-touchstone-2-1/gallery.html">Gallery</a> |
-            <a href="/book-haven-touchstone-2-1/about.html">About Us</a> |
-            <a href="/book-haven-touchstone-2-1/community.html">Community & Events</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About Us</a> |
+            <a href="community.html">Community & Events</a>
         </nav>
     </header>
 
@@ -52,7 +63,8 @@
         <section>
             <h2>Business Hours</h2>
 
-            <table border="1">
+            <table border="1"
+                   aria-label="Book Haven business hours">
 
                 <tr>
                     <th>Day</th>
@@ -85,26 +97,56 @@
                 a custom book order.
             </p>
 
-            <form>
+            <p class="required-note">
+                Fields marked with * are required.
+            </p>
+
+            <form id="contactForm"
+                  aria-label="Contact form"
+                  novalidate>
 
                 <p>
-                    <label for="name">Name:</label><br>
+                    <label for="name">
+                        Name: *
+                    </label>
+                    <br>
+
                     <input type="text"
                            id="name"
                            name="name"
-                           required>
+                           required
+                           aria-describedby="nameError">
+
+                    <span id="nameError"
+                          class="error-message"
+                          aria-live="polite">
+                    </span>
                 </p>
 
                 <p>
-                    <label for="email">Email Address:</label><br>
+                    <label for="email">
+                        Email Address: *
+                    </label>
+                    <br>
+
                     <input type="email"
                            id="email"
                            name="email"
-                           required>
+                           required
+                           aria-describedby="emailError">
+
+                    <span id="emailError"
+                          class="error-message"
+                          aria-live="polite">
+                    </span>
                 </p>
 
                 <p>
-                    <label for="phone">Phone Number:</label><br>
+                    <label for="phone">
+                        Phone Number:
+                    </label>
+                    <br>
+
                     <input type="tel"
                            id="phone"
                            name="phone">
@@ -112,14 +154,21 @@
 
                 <p>
                     <label for="message">
-                        Feedback or Custom Order Information:
-                    </label><br>
+                        Feedback or Custom Order Information: *
+                    </label>
+                    <br>
 
                     <textarea id="message"
                               name="message"
                               rows="6"
                               cols="40"
-                              required></textarea>
+                              required
+                              aria-describedby="messageError"></textarea>
+
+                    <span id="messageError"
+                          class="error-message"
+                          aria-live="polite">
+                    </span>
                 </p>
 
                 <p>
@@ -132,8 +181,13 @@
                     </label>
                 </p>
 
-                <button type="submit">Submit</button>
-                <button type="reset">Clear Form</button>
+                <button type="submit">
+                    Submit
+                </button>
+
+                <button type="reset">
+                    Clear Form
+                </button>
 
             </form>
 
@@ -147,27 +201,36 @@
 
         <h3>Join Our Newsletter</h3>
 
-        <form>
-            <label for="aboutEmail">Email:</label>
+        <form aria-label="Newsletter subscription">
+
+            <label for="aboutEmail">
+                Email:
+            </label>
 
             <input type="email"
                    id="aboutEmail"
                    name="aboutEmail"
                    placeholder="Enter your email">
 
-            <button type="button">Subscribe</button>
+            <button type="button"
+                    id="subscribeButton">
+                Subscribe
+            </button>
+
         </form>
 
         <p>
-            <a href="/book-haven-touchstone-2-1/index.html">Home</a> |
-            <a href="/book-haven-touchstone-2-1/gallery.html">Gallery</a> |
-            <a href="/book-haven-touchstone-2-1/about.html">About Us</a> |
-            <a href="/book-haven-touchstone-2-1/community.html">Community & Events</a>
+            <a href="index.html">Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About Us</a> |
+            <a href="community.html">Community & Events</a>
         </p>
 
         <p>Book Haven Bookstore</p>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
